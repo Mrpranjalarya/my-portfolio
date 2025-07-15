@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind utilities;
+
+
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  @apply text-white;
+  background-color: black; /* Example: dark navy blue */
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-slow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-border {
+  background-size: 300% 300%;
+  animation: gradient-border 6s ease infinite;
+}
+
+.animate-gradient-slow {
+  background-size: 200% 200%;
+  animation: gradient-slow 8s ease infinite;
+}
+
+/* index.css */
+@keyframes videoBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.video-bg {
+  background: linear-gradient(270deg, #facc15, #ec4899, #8b5cf6);
+  background-size: 600% 600%;
+  animation: videoBackground 10s ease infinite;
+}
